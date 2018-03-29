@@ -111,18 +111,6 @@ function Circle(x, y, dx, dy, radius) {
 
 var circleArray = [];
 
-for (var i = 0; i < 800; i++) {
-	var radius = Math.random() * 6 + 1; //promjer kruga
-	var x = Math.random() * (innerWidth - radius * 2) + radius; // x koordinata kruga
-	var y = Math.random() * (innerHeight - radius * 2) + radius;
-	var dx = (Math.random() - 0.5); // brzina po x osi
-	var dy = (Math.random() - 0.5);
-
-	circleArray.push(new Circle(x, y, dx, dy, radius));
-}
-
-var circleArray = [];
-
 function init() {
 	circleArray = [];
 
@@ -136,12 +124,6 @@ function init() {
 		circleArray.push(new Circle(x, y, dx, dy, radius));
 	}
 }
-
-var x = Math.random() * innerWidth; // x koordinata kruga
-var y = Math.random() * innerHeight;
-var dx = (Math.random() - 0.5); // brzina po x osi
-var dy = (Math.random() - 0.5);
-var radius = 30; // promjer kruga
 
 function animate() {
 	requestAnimationFrame(animate);
